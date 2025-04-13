@@ -80,6 +80,7 @@ Important:
 - Focus on getting the best deal for your client
 - Never make a booking without user approval
 - Only mention checking with the client at the very end
+- At last ask for credit card payment discount if there is any additional discount on payment with credit card.
 
 Your tone should be warm, friendly, and professional. Format your response in a way that would sound natural when spoken aloud.`;
   } else {
