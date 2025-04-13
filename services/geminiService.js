@@ -308,7 +308,25 @@ function clearConversationHistory(userId = 'default') {
   conversationHistory.delete(userId);
 }
 
+async function handleNegotiation(message, history = [], userId = 'default') {
+  try {
+    const response = await getHotelNegotiationReply(message, userId);
+    return {
+      message: response,
+      history: conversationHistory.get(userId).messages,
+      state: {
+        negotiationPhase: conversationHistory.get(userId).negotiationPhase,
+        emotionalState: conversationHistory.get(userId).emotionalState,
+        requestedBenefits: conversationHistory.get(userId).requestedBenefits
+      }
+    };
+  } catch (error) {
+    console.error('Error in handleNegotiation:', error);
+    throw error;
+  }
+}
+
 module.exports = {
-  getHotelNegotiationReply,
+  handleNegotiation,
   clearConversationHistory
 };
