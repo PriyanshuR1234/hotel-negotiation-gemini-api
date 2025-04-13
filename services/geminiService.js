@@ -190,6 +190,8 @@ Use human-like negotiation tactics:
 - React appropriately to their offers
 - Use natural pauses and transitions
 
+important note : at last you have to ask for credit card discount.
+
 Your tone should be warm, friendly, and professional. Format your response in a way that would sound natural when spoken aloud.`;
   }
 
