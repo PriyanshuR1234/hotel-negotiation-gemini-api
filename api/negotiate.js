@@ -6,14 +6,8 @@ module.exports = async (req, res) => {
       return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    let body;
-    try {
-      body = JSON.parse(req.body);
-    } catch (e) {
-      return res.status(400).json({ error: 'Invalid JSON in request body' });
-    }
-
-    const { message, history, userId } = body;
+    // For Vercel, req.body is already parsed
+    const { message, history, userId } = req.body;
     
     if (!message) {
       return res.status(400).json({ error: 'Message is required' });
